@@ -12,6 +12,9 @@ export default function transformTile(tile, extent) {
         const geom = feature.geometry;
         const type = feature.type;
 
+        // store original geometry
+        feature._geometry = geom
+
         feature.geometry = [];
 
         if (type === 1) {
